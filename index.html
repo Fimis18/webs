@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Iniciar sesion para ver:</title>
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-col">
+            <div class="btn-box">
+                <button class="btn btn-1" id="login">Iniciar sesión</button>
+                <button class="btn btn-2" id="register">Registrarse</button>
+            </div>
+
+            <!--Login form container-->
+            <form class="form-box login-form">
+                <div class="form-title">
+                    <span>Iniciar Sesión</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="inputs input-field" placeholder="Usuario" required>
+                        <ion-icon name="person-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="logPassword" oninput="changeIcon(this.value)" class="inputs input-field" placeholder="Contrasena" required>
+                        <ion-icon name="lock-closed-outline" class="icon" id="log-pass-icon" onclick="myLogPassword()"></ion-icon>
+                    </div>
+
+                    <div class="forgot-pass">
+                        <a href="#">Has olvidado tu contraseña?</a>
+                    </div>
+                    <div class="input-box">
+                        <button class="inputs submit-btn">
+                            <span>Entrar</span>
+                        </button>
+                    </div>
+
+                </div>  
+            </form>
+
+            <!--Register form container-->
+
+            <form class="form-box register-form">
+                <div class="form-title">
+                    <span>Registro</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="inputs input-field" placeholder="Usuario" required>
+                        <ion-icon name="person-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="inputs input-field" placeholder="Correo electronico" required>
+                        <ion-icon name="mail-outline" class="icon"></ion-icon>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" id="regPassword" oninput="changeIcon(this.value)" class="inputs input-field" placeholder="Contrasena" required>
+                        <ion-icon name="lock-closed-outline" class="icon" id="reg-pass-icon" onclick="myRegPassword()"></ion-icon>
+                    </div>
+
+                    <div class="forgot-pass">
+                        <input type="checkbox"
+                        id="remember-me-checkbox">
+                        <label for="remember-me-checkbox">Recordarme</label>
+                    </div>
+                    <div class="input-box">
+                        <button class="inputs submit-btn">
+                            <span>Registrarse</span>
+                        </button>
+                    </div>
+
+                </div> 
+            </form>
+
+            
+
+
+
+        </div>
+    </div>
+    </body>
+    
+    <script src="main.js"></script>
+    </html>
